@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Community Yoga Class",
+    "location": "Sydney",
+    "date": "2025-11-25",
+    "description": "A free yoga session for beginners."
+  },
+  {
+    "id": 2,
+    "title": "Local Farmers Market",
+    "location": "Melbourne",
+    "date": "2025-11-30",
+    "description": "Fresh local produce every weekend."
+  }
+]
