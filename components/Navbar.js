@@ -1,9 +1,9 @@
-import { Work_Sans } from "next/font/google";
+"use client";
+
 import Link from "next/link";
 import SignInButton from "./SignIn";
 import MenuIcon from "./MenuIcon";
 
-const workSans = Work_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Navbar({ menuOpen, toggleMenu }) {
   return (
@@ -11,8 +11,8 @@ export default function Navbar({ menuOpen, toggleMenu }) {
       <nav className="flex justify-between items-center w-[92%] mx-auto relative h-16">
         {/* Logo */}
         <div>
-          <h1 className={`${workSans.className} text-3xl font-bold text-gray-800`}>
-            Gatherly
+          <h1 className={`font-sans text-3xl font-bold text-gray-800`}>
+            <Link href="/">Gatherly</Link> 
           </h1>
         </div>
 

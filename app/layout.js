@@ -24,7 +24,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {children}
+        <div className="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] min-h-screen">
+        {children}  
+      </div>
+        
       </body>
     </html>
   );
