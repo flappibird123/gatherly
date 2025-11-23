@@ -1,7 +1,8 @@
 import EventCard from '../../components/EventCard'
-import { events } from './listings'
+import { getEvents } from '../../lib/events'
 
-export default function Events() {
+export default async function Events() {
+    const events = await getEvents();
     return (
         <div>
             <h2 className="text-5xl font-bold text-center tracking-tight text-gray-800 py-6">
