@@ -1,4 +1,4 @@
-import RSVPButton from "./RSVPButton";
+import RSVPButton from "./Buttons/RSVPButton";
 
 export default function EventCard({ event = {} }) {
   const { title, description, date, location } = event;

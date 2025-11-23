@@ -1,6 +1,6 @@
 import "./globals.css";
-import Navbar from '../components/NavbarWrapper'
-import Footer from '../components/Footer'
+import Navbar from '../components/Navbar/NavbarWrapper'
+import Footer from '../components/UI/Footer'
 
 export const metadata = {
   title: "Gatherly",

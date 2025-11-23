@@ -1,6 +1,6 @@
 // app/not-found.js
 import Link from "next/link";
-import BackButton from "@/components/BackButton";
+import BackButton from "@/components/Buttons/BackButton";
 
 export default function NotFound() {
   return (

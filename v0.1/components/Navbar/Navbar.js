@@ -37,6 +37,11 @@ export default function Navbar({ menuOpen, toggleMenu }) {
                 Events
               </NavLink>
             </li>
+            <li>
+              <NavLink href="/about">
+                About
+              </NavLink>
+            </li>
           </ul>
         </div>
 
