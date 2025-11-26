@@ -1,2 +1,1 @@
-# gatherly
-Discover Things Happening Around You
+# Version 0.1

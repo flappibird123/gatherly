@@ -1,8 +1,0 @@
-node_modules/
-.next/
-
-# Logs
-*.log
-
-# Environment files
-**/.env
