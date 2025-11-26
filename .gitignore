@@ -1,0 +1,15 @@
+.vscode/
+
+#v0.1
+/v0.1/.next/
+/v0.1/node_modules/
+
+#backup v0.2
+
+backup v0.2/.next
+backup v0.2/node_modules
+
+#v0.2
+
+v0.2/.next/
+v0.2/node_modules/
