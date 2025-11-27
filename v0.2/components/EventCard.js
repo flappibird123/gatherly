@@ -1,7 +1,6 @@
 import RSVPButton from "./Buttons/RSVPButton";
 
-export default function EventCard({ event = {} }) {
-  const { title, description, date, location } = event;
+export default function EventCard({ id, title, description, date, location }) {
   return (
     <div className="bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow rounded-xl p-6 border border-gray-200">
       <h2 className="text-2xl font-semibold text-gray-800 mb-3">
@@ -19,7 +18,7 @@ export default function EventCard({ event = {} }) {
         </p>
       </div>
       <br />
-      <RSVPButton />
+      <RSVPButton id={id}/>
     </div>
   );
 }

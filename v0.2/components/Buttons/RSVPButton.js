@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function RSVPButton() {
+export default function RSVPButton({ id }) {
   return (
     <Link
-      href="/"
+      href={`/events/${id}`}
       className="
         inline-block 
         px-6 py-3 
