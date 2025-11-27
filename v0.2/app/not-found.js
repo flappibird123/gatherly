@@ -4,7 +4,7 @@ import BackButton from "@/components/Buttons/BackButton";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 flex items-center justify-center px-6 py-12">
+    <main className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="max-w-xl w-full text-center">
         <h1 className="text-8xl font-extrabold text-slate-900">404</h1>
 

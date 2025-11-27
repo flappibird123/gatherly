@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+
+//about page
 export default function About() {
   return (
     <section className="py-20 px-6 md:px-24">

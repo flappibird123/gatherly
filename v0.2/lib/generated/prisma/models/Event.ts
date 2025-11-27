@@ -181,7 +181,7 @@ export type EventWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.EventWhereInput | Prisma.EventWhereInput[]
   title?: Prisma.StringFilter<"Event"> | string
   description?: Prisma.StringFilter<"Event"> | string
-}, "id">
+}, "id" | "id">
 
 export type EventOrderByWithAggregationInput = {
   id?: Prisma.SortOrder

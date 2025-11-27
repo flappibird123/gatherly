@@ -7,13 +7,13 @@ export default function Home() {
 
       {/* Header Section */}
       <div className="text-center max-w-2xl mb-12">
-        <h1 className="text-5xl font-extrabold text-white mb-4 drop-shadow-[0_2px_15px_rgba(0,0,0,0.5)]">
+        <h1 className="text-5xl font-extrabold text-black mb-4 ">
           Gatherly
         </h1>
-        <h2 className="text-2xl font-semibold text-white mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+        <h2 className="text-2xl font-semibold text-black mb-6 ">
           Discover Local Events Near You
         </h2>
-        <h3 className="text-white text-base md:text-lg leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
+        <h3 className="text-black text-base md:text-lg leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
           Gatherly is a modern platform connecting communities through local events. 
           Discover, share, and RSVP to gatherings effortlessly, fostering meaningful connections 
           in a sleek, user-friendly, and intuitive environment.
@@ -24,13 +24,13 @@ export default function Home() {
       <div className="flex gap-6 mb-12 flex-wrap justify-center">
         <Link
           href="/events"
-          className="bg-white text-[#a6c1ee] px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+          className="bg-white text-black px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
         >
           Find Events
         </Link>
         <Link
           href="/sign-in"
-          className="border-2 border-white text-white px-6 py-3 rounded-xl font-medium hover:bg-white hover:text-[#a6c1ee] transition-colors duration-300"
+          className="border-2 border-white text-black px-6 py-3 rounded-xl font-medium hover:bg-white hover:text-[#a6c1ee] transition-colors duration-300"
         >
           Join Now!
         </Link>

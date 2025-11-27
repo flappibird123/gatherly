@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
 
+
+//wrapper for the navbar to handle state
 export default function NavbarWrapper() {
   const [menuOpen, setMenuOpen] = useState(false);
 

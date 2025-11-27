@@ -1,8 +1,8 @@
-import Link from "next/link";
+
 
 export default function RSVPButton({ id }) {
   return (
-    <Link
+    <div
       href={`/events/${id}`}
       className="
         inline-block 
@@ -21,6 +21,6 @@ export default function RSVPButton({ id }) {
       "
     >
       I'm In!
-    </Link>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
-// utils/handleSearch.js
+//TODO: use prisma to make search function
+
 export function handleSearch(query) {
-  // do whatever you want with the query
-  alert("Search value: " + query);
+  
 }
