@@ -23,7 +23,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "/Users/jason/Desktop/CODE/gatherly/v0.2/lib/generated/prisma",
+      "value": "/Users/jason/Desktop/CODE/gatherly/v0.2.1/lib/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -37,7 +37,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/jason/Desktop/CODE/gatherly/v0.2/prisma/schema.prisma",
+    "sourceFilePath": "/Users/jason/Desktop/CODE/gatherly/v0.2.1/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../prisma",
@@ -47,6 +47,7 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
