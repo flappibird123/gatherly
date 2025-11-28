@@ -71,7 +71,9 @@ export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof
 export const EventScalarFieldEnum = {
   id: 'id',
   title: 'title',
-  description: 'description'
+  description: 'description',
+  date: 'date',
+  location: 'location'
 } as const
 
 export type EventScalarFieldEnum = (typeof EventScalarFieldEnum)[keyof typeof EventScalarFieldEnum]

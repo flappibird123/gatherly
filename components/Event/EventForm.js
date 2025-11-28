@@ -10,6 +10,8 @@ export default function EventForm() {
     const [error, setError] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
+    const [location, setLocation] = useState("");
+    const [success, setSuccess] = useState("");
 
     function handleChangeTitle(e) {
         setTitle(e.target.value);
@@ -27,17 +29,24 @@ export default function EventForm() {
         setTime(e.target.value);
     }
 
+    function handleChangeLocation(e) {
+        setLocation(e.target.value);
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
-        setError(validate(title, description, date, time));
+        setError(validate(title, description, date, time, location));
         if (error) {
             return;
         }
-        createEvent(title, description);
+        createEvent(title, description, date, time, location);
         setTitle("");
         setDescription("");
         setDate("");
         setTime("");
+        setLocation("");
+        setSuccess("Event created successfully!");
+        console.log(`${date}, ${time}`)
     }
 
     return (
@@ -71,12 +80,20 @@ export default function EventForm() {
             value={time}
             onChange={handleChangeTime}
         />
+        <input 
+            type="text"
+            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-gradient-to-r from-purple-200 via-indigo-200 to-blue-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-white transition-all resize-none text-sm sm:text-base"
+            value={location}
+            onChange={handleChangeLocation}
+            placeholder="Event location..."
+        />
         <button
             type="submit"
             className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-bold py-3 rounded-xl shadow-lg hover:scale-105 transform transition-all cursor-pointer text-sm sm:text-base"
         >
             Submit
         </button>
+        <p className="py-2 text-2xl">{success}</p>
     </form>
 </div>
     );
