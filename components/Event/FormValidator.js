@@ -1,9 +1,6 @@
 import { locationExists } from '@/lib/location/location'
 
 export function validate(title, description, date, time, location) {
-    if (!locationExists(location)) {
-        return "Please enter a valid location";
-    }
     const errors = [];
     if (!title.trim()) {
         errors.push("Title");
@@ -16,6 +13,9 @@ export function validate(title, description, date, time, location) {
     }
     if (!time) {
         errors.push("Time");
+    }
+    if (!location) {
+        errors.push("Location");
     }
     if(errors.length) {
         return errors.join(", ") + " cannot be empty!";

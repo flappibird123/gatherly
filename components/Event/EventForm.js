@@ -35,9 +35,12 @@ export default function EventForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        setError(validate(title, description, date, time, location));
-        if (error) {
-            return;
+        const validation = validate(title, description, date, time, location);
+        setError(validation);
+
+        if (validation) {
+        console.log("error");
+        return;
         }
         createEvent(title, description, date, time, location);
         setTitle("");
@@ -46,7 +49,6 @@ export default function EventForm() {
         setTime("");
         setLocation("");
         setSuccess("Event created successfully!");
-        console.log(`${date}, ${time}`)
     }
 
     return (
