@@ -19,11 +19,6 @@ It makes it easy for anyone to browse nearby happenings, list their own events, 
 ```bash
 git clone https://github.com/flappibird123/gatherly.git
 cd gatherly
-```
-Choose what version you want to run
-e.g. 
-```bash
-cd v0.2
 npm install
 ```
 
