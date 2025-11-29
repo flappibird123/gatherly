@@ -2,6 +2,7 @@
 
 import { auth } from '@/lib/auth/auth'
 import { headers } from 'next/headers'
+import { redirect } from 'next/navigation';
 
 export async function signUp(email: string, password: string, name: string) {
     const result = await auth.api.signUpEmail({
@@ -37,12 +38,14 @@ export async function signOut() {
 }
 
 export async function signInSocial(provider: "github" | "google") {
-    const result = await auth.api.signInSocial({
+    const { url } = await auth.api.signInSocial({
         body: {
             provider,
             callbackURL: "/dashboard",
         },
     });
 
-    return result;
+    if (url) {
+        redirect(url);
+    }
 }

@@ -4,7 +4,7 @@ import SignInPage from "@/components/Auth/SignIn"
 import SignUpPage from "@/components/Auth/SignUp"
 import { useState } from 'react'
 import { UserData } from '@/types/user-data'
-import { signIn, signUp } from "@/lib/actions/auth-actions"
+import { signIn, signInSocial, signUp } from "@/lib/actions/auth-actions"
 import { useEffect } from "react"
 
 
@@ -40,8 +40,21 @@ export default function AuthPage() {
             }
         }
     }
-
     
+    async function handleSocialAuth(provider: "google" | "github") {
+        try {
+            await signInSocial(provider);
+        } catch (err: any) {
+            if (err?.statusCode && err?.message) {
+                setError(`Error ${err.statusCode}: ${err.message}`)
+            } else if (err instanceof Error) {
+                setError("Unexpected error: "+ err.message)
+            } else {
+                setError("Unknown Error: " + err)
+            }
+        }
+    }
+
     return(
         <> 
             {mode === "SignIn" ? 
