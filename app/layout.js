@@ -1,7 +1,7 @@
 import "./globals.css";
 import Navbar from '../components/Navbar/NavbarWrapper'
 import Footer from '../components/UI/Footer'
-import { auth } from "@/lib/auth";
+import { auth } from "@/lib/auth/auth";
 import { headers } from "next/headers";
 
 export const metadata = {

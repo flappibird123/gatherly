@@ -1,6 +1,6 @@
 "use server"
 
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import { headers } from 'next/headers'
 
 export async function signUp(email: string, password: string, name: string) {
@@ -31,6 +31,17 @@ export async function signIn(email: string, password: string) {
 export async function signOut() {
     const result = await auth.api.signOut({
         headers: await headers()
+    });
+
+    return result;
+}
+
+export async function signInSocial(provider: "github" | "google") {
+    const result = await auth.api.signInSocial({
+        body: {
+            provider,
+            callbackURL: "/dashboard",
+        },
     });
 
     return result;
