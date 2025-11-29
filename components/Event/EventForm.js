@@ -60,14 +60,14 @@ export default function EventForm() {
             value={title}
             onChange={handleChangeTitle}
             placeholder="Event title..."
-            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-gradient-to-r from-pink-200 via-purple-200 to-indigo-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm sm:text-base"
+            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-linear-to-r from-pink-200 via-purple-200 to-indigo-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm sm:text-base"
         />
         <textarea
             value={description}
             onChange={handleChangeDescription}
             placeholder="Event description..."
             rows={5}
-            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-gradient-to-r from-purple-200 via-indigo-200 to-blue-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-white transition-all resize-none text-sm sm:text-base"
+            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-linear-to-r from-purple-200 via-indigo-200 to-blue-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-white transition-all resize-none text-sm sm:text-base"
         />
         <input 
             type="date" 
@@ -84,14 +84,14 @@ export default function EventForm() {
         />
         <input 
             type="text"
-            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-gradient-to-r from-purple-200 via-indigo-200 to-blue-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-white transition-all resize-none text-sm sm:text-base"
+            className="w-full px-4 py-3 sm:px-5 sm:py-3 rounded-xl border border-transparent bg-linear-to-r from-purple-200 via-indigo-200 to-blue-200 text-gray-800 placeholder-gray-500 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-white transition-all resize-none text-sm sm:text-base"
             value={location}
             onChange={handleChangeLocation}
             placeholder="Event location..."
         />
         <button
             type="submit"
-            className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-bold py-3 rounded-xl shadow-lg hover:scale-105 transform transition-all cursor-pointer text-sm sm:text-base"
+            className="w-full bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-bold py-3 rounded-xl shadow-lg hover:scale-105 transform transition-all cursor-pointer text-sm sm:text-base"
         >
             Submit
         </button>

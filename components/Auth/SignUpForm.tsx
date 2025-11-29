@@ -39,11 +39,11 @@ export function SignUpForm({ sendData }: UserDataProps) {
         <form className="space-y-4 mt-4">
             <div>
                 <label className="text-sm font-medium">Username</label>
-                <Input type="text" placeholder="Enter a username" value={username} onChange={handleChangeUsername} />
+                <Input type="text" placeholder="Enter a username" value={username} onChange={handleChangeUsername} required/>
             </div>
             <div>
                 <label className="text-sm font-medium">Email</label>
-                <Input type="email" placeholder="Enter your email" value={email} onChange={handleChangeEmail} />
+                <Input type="email" placeholder="Enter your email" value={email} onChange={handleChangeEmail} required/>
             </div>      
             <div>
                 <label className="text-sm font-medium">Password</label>
@@ -54,6 +54,7 @@ export function SignUpForm({ sendData }: UserDataProps) {
                        className="pr-10" 
                        value={password}
                        onChange={handleChangePassword}
+                       required
                     />
                     <button
                         type="button"

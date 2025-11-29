@@ -40,6 +40,7 @@ export function SignInForm({ sendData }: UserDataProps) {
           placeholder="Enter your email"
           value={email}
           onChange={handleChangeEmail}
+          required
         />
       </div>
 
@@ -53,6 +54,7 @@ export function SignInForm({ sendData }: UserDataProps) {
             className="pr-10" 
             value={password}
             onChange={handleChangePassword}
+            required
           />
           <button
             type="button"
