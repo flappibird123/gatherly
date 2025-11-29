@@ -49,3 +49,23 @@ path.join(process.cwd(), "lib/generated/prisma/libquery_engine-darwin-arm64.dyli
  * 
  */
 export type Event = Prisma.EventModel
+/**
+ * Model User
+ * 
+ */
+export type User = Prisma.UserModel
+/**
+ * Model Session
+ * 
+ */
+export type Session = Prisma.SessionModel
+/**
+ * Model Account
+ * 
+ */
+export type Account = Prisma.AccountModel
+/**
+ * Model Verification
+ * 
+ */
+export type Verification = Prisma.VerificationModel

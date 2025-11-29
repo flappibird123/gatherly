@@ -2,7 +2,7 @@
 
 /* globals.css */
 body {
-  @apply bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee];
+  @apply bg-linear-to-t from-[#fbc2eb] to-[#a6c1ee];
   min-height: 100vh;
   display: flex;
   flex-direction: column;

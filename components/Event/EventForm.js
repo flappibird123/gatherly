@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-import { createEvent } from '@/actions/events/post'
+import { createEvent } from '@/lib/actions/events/post'
 import { validate } from './FormValidator'
 
 export default function EventForm() {
