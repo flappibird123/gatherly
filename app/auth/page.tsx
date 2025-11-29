@@ -13,7 +13,10 @@ export default function SignIn() {
     }
     return(
         <> 
-            {mode === "SignIn" ? <SignInPage changeMode={setMode} sendData={handleData}/> : <SignUpPage changeMode={setMode}/>} 
+            {mode === "SignIn" ? 
+                <SignInPage changeMode={setMode} sendData={handleData}/> : 
+                <SignUpPage changeMode={setMode} sendData={handleData}/>
+            } 
         </>
     );
 }
