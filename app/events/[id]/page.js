@@ -1,5 +1,5 @@
-import prisma from '@/lib/db.ts';
 import { convertToDate, convertToTime } from '@/lib/time/time';
+import { searchById } from '@/lib/prisma/search';
 
 export default async function Event({ params }) {
     //resolve id
@@ -8,9 +8,7 @@ export default async function Event({ params }) {
 
     if (!id) return <p className="text-center text-red-500 mt-10">No event ID provided</p>;
 
-    const event = await prisma.event.findUnique({
-        where: { id },
-    });
+    const event = await searchById(id)
 
     if (!event) return <p className="text-center text-gray-500 mt-10">Event not found</p>;
 

@@ -2,9 +2,22 @@
 
 import Link from "next/link";
 
-export default function Error({ error, reset }) {
+interface ErrorProps {
+  error: Error;
+  reset?: () => void;
+}
+
+export default function Error({ error, reset }: ErrorProps) {
+  const handleRetry = () => {
+    if (typeof reset === "function") {
+      reset(); 
+    } else {
+      window.location.reload(); 
+    }
+  };
+
   return (
-    <main className="min-h-screen  flex items-center justify-center px-6 py-12">
+    <main className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="max-w-xl w-full text-center">
         <h1 className="text-8xl font-extrabold text-red-600">Oops!</h1>
 
@@ -18,12 +31,11 @@ export default function Error({ error, reset }) {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <button
-            onClick={() => window.location.reload()} // simple retry
+            onClick={handleRetry}
             className="px-5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 shadow-sm hover:shadow transition cursor-pointer"
           >
-          Try Again
+            Try Again
           </button>
-
 
           <Link
             href="/"

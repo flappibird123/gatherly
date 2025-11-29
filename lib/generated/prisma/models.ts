@@ -8,5 +8,5 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/Event.ts'
-export type * from './commonInputTypes.ts'
+export type * from './models/Event'
+export type * from './commonInputTypes'

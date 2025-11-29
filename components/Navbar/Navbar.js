@@ -8,7 +8,7 @@ import NavLink from './NavLink'
 export default function Navbar({ menuOpen, toggleMenu }) {
   return (
     <header className="bg-white shadow-md">
-      <nav className="flex justify-between items-center w-[92%] mx-auto relative h-16 z-[9999]">
+      <nav className="flex justify-between items-center w-[92%] mx-auto relative h-16 z-9999">
         {/* Logo */}
         <div>
           <h1 className={`font-sans text-3xl font-bold text-gray-800`}>
