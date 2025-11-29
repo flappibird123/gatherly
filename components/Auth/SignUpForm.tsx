@@ -5,6 +5,7 @@ import { Button } from "@/components/UI/Button";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { UserDataProps } from '@/types/user-data-props'
+import { InputOnChange, ButtonOnClick } from "@/types/react-events";
 
 
 export function SignUpForm({ sendData }: UserDataProps) {
@@ -13,19 +14,19 @@ export function SignUpForm({ sendData }: UserDataProps) {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
 
-    function handleChangeEmail(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleChangeEmail(e: InputOnChange) {
         setEmail(e.target.value);
     }
 
-    function handleChangePassword(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleChangePassword(e: InputOnChange) {
         setPassword(e.target.value);
     }
     
-    function handleChangeUsername(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleChangeUsername(e: InputOnChange) {
         setUsername(e.target.value);
     }
 
-    function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    function handleSubmit(e: ButtonOnClick) {
         e.preventDefault();
         const data = {
             email: email,

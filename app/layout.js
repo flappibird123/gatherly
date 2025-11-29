@@ -1,6 +1,8 @@
 import "./globals.css";
 import Navbar from '../components/Navbar/NavbarWrapper'
 import Footer from '../components/UI/Footer'
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 export const metadata = {
   title: "Gatherly",
@@ -10,11 +12,15 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
   return (
     <html lang="en">
       <body className="antialiased bg-linear-to-t from-[#fbc2eb] to-[#a6c1ee] min-h-screen flex flex-col">
-        <Navbar />
+        <Navbar session={session} />
         <main className="grow p-4 pb-24 bg-transparent">
           {children}
         </main>

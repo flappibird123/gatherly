@@ -3,3 +3,8 @@
 # Ignore build artifacts and dependencies in all subfolders
 **/node_modules/
 **/.next/
+
+
+# Environment variables
+
+.env.local

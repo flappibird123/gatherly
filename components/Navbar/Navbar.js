@@ -5,7 +5,7 @@ import SignInButton from "./SignIn";
 import MenuIcon from "./MenuIcon";
 import NavLink from './NavLink'
 
-export default function Navbar({ menuOpen, toggleMenu }) {
+export default function Navbar({ menuOpen, toggleMenu, session }) {
   return (
     <header className="bg-white shadow-md">
       <nav className="flex justify-between items-center w-[92%] mx-auto relative h-16 z-9999">
@@ -42,22 +42,12 @@ export default function Navbar({ menuOpen, toggleMenu }) {
                 About
               </NavLink>
             </li>
-            <li>
-              <NavLink href="/events/create-event">
-                Create Event
-              </NavLink>
-            </li>
-            <li>
-              <NavLink href="/dashboard">
-                Dashboard
-              </NavLink>
-            </li>
           </ul>
         </div>
 
         {/* Sign In + Hamburger */}
         <div className="flex items-center gap-6">
-          <SignInButton />
+          <SignInButton session={session} />
           <MenuIcon menuOpen={menuOpen} toggleMenu={toggleMenu} />
         </div>
       </nav>
