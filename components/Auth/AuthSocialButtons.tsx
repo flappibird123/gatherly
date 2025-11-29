@@ -1,5 +1,6 @@
-import { Button } from "@/components/UI/button";
+import { Button } from "@/components/UI/Button";
 import { Github, Mail } from "lucide-react";
+
 
 export function AuthSocialButtons() {
   return (

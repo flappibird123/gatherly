@@ -1,12 +1,34 @@
 "use client"
 
 import { useState } from "react";
-import { Input } from "@/components/UI/input";
-import { Button } from "@/components/UI/button";
+import { Input } from "@/components/UI/Input";
+import { Button } from "@/components/UI/Button";
 import { Eye, EyeOff } from "lucide-react";
+import { UserDataProps } from '@/types/user-data-props'
 
-export function SignInForm() {
+
+export function SignInForm({ sendData }: UserDataProps) {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleChangeEmail(e: React.ChangeEvent<HTMLInputElement>) {
+    setEmail(e.target.value);
+  }
+
+  function handleChangePassword(e: React.ChangeEvent<HTMLInputElement>) {
+    setPassword(e.target.value);
+  }
+  
+  function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.preventDefault();
+    const data = {
+      email: email,
+      password: password,
+      username: null,
+    };
+    sendData(data);
+  }
 
   return (
     <form className="space-y-4 mt-4">
@@ -16,6 +38,8 @@ export function SignInForm() {
         <Input
           type="email"
           placeholder="Enter your email"
+          value={email}
+          onChange={handleChangeEmail}
         />
       </div>
 
@@ -27,6 +51,8 @@ export function SignInForm() {
             type={showPassword ? "text" : "password"}
             placeholder="••••••••"
             className="pr-10" 
+            value={password}
+            onChange={handleChangePassword}
           />
           <button
             type="button"
@@ -39,7 +65,7 @@ export function SignInForm() {
       </div>
 
       {/* Sign In Button */}
-      <Button className="w-full rounded-xl mt-2 cursor-pointer">Sign In</Button>
+      <Button type="button" className="w-full rounded-xl mt-2 cursor-pointer" onClick={handleSubmit}>Sign In</Button>
     </form>
   );
 }
