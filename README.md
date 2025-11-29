@@ -13,6 +13,7 @@ It makes it easy for anyone to browse nearby happenings, list their own events, 
   - Tailwind CSS
   - Prisma ORM
   - PostgreSQL
+  - Typescript
 
 ## Installation/Cloning
 
