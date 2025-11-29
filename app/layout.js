@@ -13,9 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] min-h-screen flex flex-col">
+      <body className="antialiased bg-linear-to-t from-[#fbc2eb] to-[#a6c1ee] min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-grow p-4 pb-24 bg-transparent">
+        <main className="grow p-4 pb-24 bg-transparent">
           {children}
         </main>
         <Footer />
