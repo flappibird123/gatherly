@@ -1,6 +1,8 @@
 import { AuthSocialButtons } from "./AuthSocialButtons"
 import { SignUpForm } from "./SignUpForm"
-import HR from "../UI/HrText";
+import HR from "../UI/HrText"
+import Link from 'next/link'
+import LinkText from '@/components/UI/LinkText'
 
 export default function SignUp() {
     return (
@@ -11,6 +13,9 @@ export default function SignUp() {
                 <AuthSocialButtons />
                 <HR text="Or continue with" />
                 <SignUpForm />
+                <Link href="/auth/sign-in">
+                    <p className="text-center text-1xl">Already have an account? <LinkText text="Sign in" /></p>
+                </Link>
             </div>
         </div>
     );

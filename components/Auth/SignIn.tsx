@@ -2,6 +2,7 @@ import { AuthSocialButtons } from "./AuthSocialButtons"
 import { SignInForm } from "./SignInForm"
 import Link from 'next/link'
 import HR from "@/components/UI/HrText"
+import LinkText from '@/components/UI/LinkText'
 
 
 export default function SignIn() {
@@ -14,7 +15,7 @@ export default function SignIn() {
                 <HR text="Or continue with" />
                 <SignInForm />
                 <Link href="/auth/sign-up">
-                    <p className="text-center text-1xl">Don't have an account? Sign up <span className="underline text-blue-400 hover:text-blue-600 transition-colors duration-300 ease-in-out">here</span></p>
+                    <p className="text-center text-1xl">Don't have an account? Sign up <LinkText text="here" /></p>
                 </Link>
          </div>
      </div>
