@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import prisma from '@/lib/db.ts';
 import EventCard from '@/components/Event/EventCard';
 import { convertToDate, convertToTime } from '@/lib/time/time';
 import { getAllEvents } from '@/lib/prisma/search';
@@ -23,7 +22,6 @@ export default async function Events() {
 
           <Link key={event.id} href={`/events/${event.id}`}>
             <EventCard
-              id={event.id}
               title={event.title}
               description={event.description}
               location={event.location}

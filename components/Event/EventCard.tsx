@@ -1,6 +1,7 @@
 import RSVPButton from "../Buttons/RSVPButton";
+import { EventCardProps } from '@/types/event-card-props'
 
-export default function EventCard({ id, title, description, date, location, time }) {
+export default function EventCard({ title, description, date, location, time }: EventCardProps) {
   return (
     <div className="flex flex-col justify-between bg-white/80 backdrop-blur-sm shadow-md hover:shadow-lg transition-shadow rounded-xl p-6 border border-gray-200 h-full">
       <div className="relative z-10 flex-1">
@@ -25,7 +26,7 @@ export default function EventCard({ id, title, description, date, location, time
       </div>
 
       <div className="mt-4">
-        <RSVPButton id={id} />
+        <RSVPButton />
       </div>
     </div>
   );

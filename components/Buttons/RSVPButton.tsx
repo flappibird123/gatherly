@@ -1,9 +1,8 @@
 
 
-export default function RSVPButton({ id }) {
+export default function RSVPButton() {
   return (
     <div
-      href={`/events/${id}`}
       className="
         inline-block 
         px-6 py-3 

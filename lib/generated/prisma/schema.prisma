@@ -15,7 +15,7 @@ datasource db {
 }
 
 model Event {
-  id          String   @unique @id @default(cuid())
+  id          String   @id @unique @default(cuid())
   title       String
   description String
   date        DateTime

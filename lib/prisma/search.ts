@@ -1,3 +1,5 @@
+"use server"
+
 import prisma from '@/lib/db'
 import { Event as PrismaEvent } from '@/lib/generated/prisma/client'
 
