@@ -1,6 +1,6 @@
 import { locationExists } from '@/lib/location/location'
 
-export function validate(title, description, date, time, location) {
+export function validate(title: string, description: string, date: string, time: string, location: string): string {
     const errors = [];
     if (!title.trim()) {
         errors.push("Title");
