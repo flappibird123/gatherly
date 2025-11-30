@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+    <div className="flex flex-col items-center justify-center px-6 py-12">
 
       {/* Header Section */}
       <div className="text-center max-w-2xl mb-12">
