@@ -39,7 +39,7 @@ export default function AuthPage() {
                 setError("Unknown Error: " + err)
             }
         }
-    }
+    } 
     
     async function handleSocialAuth(provider: "google" | "github") {
         try {
@@ -58,8 +58,8 @@ export default function AuthPage() {
     return(
         <> 
             {mode === "SignIn" ? 
-                <SignInPage changeMode={setMode} sendData={handleData} error={error} /> : 
-                <SignUpPage changeMode={setMode} sendData={handleData} error={error} />
+                <SignInPage changeMode={setMode} sendData={handleData} error={error} sendSocialAuth={handleSocialAuth}/> : 
+                <SignUpPage changeMode={setMode} sendData={handleData} error={error} sendSocialAuth={handleSocialAuth}/>
             } 
         </>
     );
