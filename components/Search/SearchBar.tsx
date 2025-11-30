@@ -4,8 +4,10 @@ import { useState } from "react";
 import SearchInput from "./SearchInput";
 import SearchButton from "./SearchButton";
 import { handleSearch } from "../../lib/handleSearch"; 
+import { ClassNameProps } from "@/types/class-name-props"
+import { InputOnChange } from "@/types/react-events";
 
-export default function SearchBar() {
+export default function SearchBar({ className }: ClassNameProps) {
   const [query, setQuery] = useState("");
 
   const onSearch = () => {
@@ -16,7 +18,7 @@ export default function SearchBar() {
     <div className="flex max-w-md mx-auto my-4">
       <SearchInput
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e: InputOnChange) => setQuery(e.target.value)}
         onEnter={onSearch} 
       />
       <SearchButton onClick={onSearch} />

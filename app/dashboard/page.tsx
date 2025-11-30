@@ -1,6 +1,6 @@
 import { getUserSession } from '@/lib/auth/check-auth'
 import { redirect } from 'next/navigation';
-import SignOutButton from '@/components/Buttons/SignOutButton'
+import DashboardPage from '@/components/Dashboard/Dashboard'
 
 
 export default async function Dashboard() {
@@ -8,7 +8,8 @@ export default async function Dashboard() {
     if (!session) {
         redirect("/auth");
     }
-    return <div>
-        <SignOutButton />
-    </div>
+    return( <div>
+                <DashboardPage session={session} />
+             </div>
+          );
 } 
