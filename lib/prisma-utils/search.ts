@@ -12,3 +12,15 @@ export async function searchById(id: string): Promise<PrismaEvent | null> {
 export async function getAllEvents(): Promise<PrismaEvent[]> {
     return await prisma.event.findMany();
 }
+
+export async function handleSearch(query: string) {
+  const events = await prisma.event.findMany({
+    where: {
+      OR: [
+        { title: { contains: query, mode: 'insensitive' } },
+        { description: { contains: query, mode: 'insensitive' } },
+      ],
+    },
+  });
+  return events;
+}

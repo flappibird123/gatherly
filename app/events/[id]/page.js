@@ -1,5 +1,5 @@
 import { convertToDate, convertToTime } from '@/lib/time/time';
-import { searchById } from '@/lib/prisma/search';
+import { searchById } from '@/lib/prisma-utils/search';
 
 export default async function Event({ params }) {
     //resolve id

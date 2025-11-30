@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import EventCard from '@/components/Event/EventCard';
 import { convertToDate, convertToTime } from '@/lib/time/time';
-import { getAllEvents } from '@/lib/prisma/search';
-import { getEventCount } from '@/lib/prisma/count';
+import { getAllEvents } from '@/lib/prisma-utils/search';
+import { getEventCount } from '@/lib/prisma-utils/count';
 
 export default async function Events() {
   //get all posts

@@ -18,6 +18,7 @@ export default function SearchInput({ value, onChange, onEnter }: SearchInputPro
       onKeyDown={(e) => {
       if (e.key === "Enter") onEnter?.(); 
       }}
+      autoFocus
       className="flex-1 text-base md:text-lg px-6 md:px-12 py-3 md:py-4 rounded-l-lg border border-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm transition"
     />
   );
